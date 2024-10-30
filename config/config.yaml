@@ -1,0 +1,39 @@
+server:
+  host: "localhost"
+  port: 8765
+  workers: 8
+
+# RVC
+rvc:
+  pth_path: "weights/rvc/xiaowen_v2.pth"
+  index_path: ""
+  pitch: 2
+  formant: 0
+  sr_type: "sr_model"
+  block_time: 0.25    # 秒
+  threshold: -60
+  crossfade_time: 0.05
+  extra_time: 2.5
+  I_noise_reduce: false
+  O_noise_reduce: false
+  rms_mix_rate: 0.0
+  index_rate: 0.0
+  index: ""
+  n_cpu: 32
+  f0method: "rmvpe"
+  samplerate: 16000
+  device: "cuda:0"
+
+# basic
+f0_min: 50
+f0_max: 1100
+use_jit: false
+is_half: false
+
+log:
+  log_name: "bytech"
+  log_directory: "logs"
+  log_level: "INFO"
+
+wav:
+  sample_rate: 16000
